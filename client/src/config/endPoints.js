@@ -1,4 +1,4 @@
-export const host = () => 'https://kittysplash.herokuapp.com/';
+export const host = () => 'https://kittysplash.herokuapp.com';
 export const hostFrontSkin = () => 'https://kittysplash.herokuapp.com/shop-cards/';
 export const getStats = (id) => `${host()}/statistics/${id}`;
 
