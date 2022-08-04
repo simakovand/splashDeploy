@@ -253,7 +253,7 @@ io.on('connection', (socket) => {
 
 app.use(cors({ origin: true, credentials: true }));
 
-app.use(express.static(path.join(__dirname, '../../client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -277,7 +277,7 @@ app.use('/statistics', statisicsRouter);
 app.use('/skins', skinRouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
 server.listen(PORT, console.log('Server running on Port ', PORT));

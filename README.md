@@ -1,2 +1,0 @@
-# Splash
-socket.io game

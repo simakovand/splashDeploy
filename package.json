@@ -1,24 +1,38 @@
 {
-  "name": "splashdeploy",
+  "name": "server",
   "version": "1.0.0",
-  "description": "socket.io game",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "engines": {
     "node": "16.16.0"
   },
   "scripts": {
-    "postinstall": "cd server && npm i && npx sequelize db:migrate && cd ../client && npm i && DISABLE_ESLINT_PLUGIN=true npm run build",
-    "start": "cd server && npm start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simakovand/splashDeploy.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/simakovand/splashDeploy/issues"
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "sequelize-cli": "^6.4.1"
   },
-  "homepage": "https://github.com/simakovand/splashDeploy#readme"
+  "dependencies": {
+    "@socket.io/admin-ui": "^0.4.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "randomstring": "^1.2.2",
+    "sequelize": "^6.21.3",
+    "session-file-store": "^1.5.0",
+    "socket.io": "^4.5.1",
+    "uuid": "^8.3.2"
+  }
 }
