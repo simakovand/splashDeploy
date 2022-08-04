@@ -1,20 +1,20 @@
-export const host = () => 'http://localhost:3030';
-export const hostFrontSkin = () => 'http://localhost:3000/shop-cards/';
-export const getStats = (id) => `/statistics/${id}`;
+export const host = () => 'https://kittysplash.herokuapp.com/';
+export const hostFrontSkin = () => 'https://kittysplash.herokuapp.com/shop-cards/';
+export const getStats = (id) => `${host()}/statistics/${id}`;
 
-export const signUp = () => `/auth/signup`;
-export const signIn = () => `/auth/signin`;
-export const signOut = () => `/auth/signout`;
-export const checkAuth = () => `/auth/check`;
+export const signUp = () => `${host()}/auth/signup`;
+export const signIn = () => `${host()}/auth/signin`;
+export const signOut = () => `${host()}/auth/signout`;
+export const checkAuth = () => `${host()}/auth/check`;
 
-export const getAllUsers = () => `/users`;
-export const editUser = (id) => `/users/${id}`;
-export const getUser = (id) => `/users/${id}`;
+export const getAllUsers = () => `${host()}/users`;
+export const editUser = (id) => `${host()}/users/${id}`;
+export const getUser = (id) => `${host()}/users/${id}`;
 
-export const getCurrRoom = () => `/curr/room`;
-export const getRooms = () => `/rooms`;
+export const getCurrRoom = () => `${host()}/curr/room`;
+export const getRooms = () => `${host()}/rooms`;
 
-export const getAllSkins = () => `/skins`;
-export const postSkin = () => `/skins`;
-export const getUserSkins = (id) => `/skins/user/${id}`;
-export const putSkinUser = () => `/skins/user`;
+export const getAllSkins = () => `${host()}/skins`;
+export const postSkin = () => `${host()}/skins`;
+export const getUserSkins = (id) => `${host()}/skins/user/${id}`;
+export const putSkinUser = () => `${host()}/skins/user`;
