@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "undertale";
+  src: url('./assets/fonts/Undertale-Battle-Font.ttf');
+}
+
+body {
+  font-family: "undertale";
+}
+
+/* .btn {
+  @apply rounded-full;
+} */
+
+.game-canvas {
+  border: 5px solid #fdc34d;
+  align-self: center;
+  image-rendering: pixelated;
+  transform: scale(1.8) translateY(14%);
+  background-color: #fde68b;
+}
+
+.back {
+  min-height: 100vh;
+  background: url('https://kartinkin.net/uploads/posts/2021-07/1625541534_2-kartinkin-com-p-krasivii-fon-terrariya-krasivie-foni-2.jpg') center no-repeat;
+}
+
+.backshop {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/images/picture/simpleguy_pixel_cat_shop_40344d36-2b94-4544-9a63-0ebf23bfbca0.png') center center repeat fixed;
+}
+
+.backmain {
+  min-height: 100vh;
+  background: url('./assets/images/picture/simpleguy_kitty_splash_in_the_desert_3140b188-9aac-42c8-8e9b-0f33cb069662.png') center repeat
+}
+
+.backhead {
+  min-height: 100vh;
+  background: url('./assets/images/picture/simpleguy_kitty_splash_08c8b024-4a62-4acb-ad3d-a5dcfeeb0e16.png') center repeat
+}
+
+.animation:hover {
+  transform-origin: center;
+  transform: translateY(-10px);
+  transition: 0.7s;
+
+}
+
+.animation::before {
+  content: '';
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: rgb(252, 230, 139);
+  transition: 0.2s;
+}
+
+.animation:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+.shop {
+  min-width: 200px;
+}

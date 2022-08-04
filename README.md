@@ -1,2 +1,2 @@
-# splashDeploy
-test with socket io
+# Splash
+socket.io game
