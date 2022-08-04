@@ -1,0 +1,21 @@
+{
+  "name": "splashdeploy",
+  "version": "1.0.0",
+  "description": "socket.io game",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd server && npm i && npx sequelize db:migrate && cd ../client && npm i && DISABLE_ESLINT_PLUGIN=true npm run build",
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simakovand/splashDeploy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simakovand/splashDeploy/issues"
+  },
+  "homepage": "https://github.com/simakovand/splashDeploy#readme"
+}

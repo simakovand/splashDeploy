@@ -5,6 +5,7 @@ const express = require('express');
 const session = require('express-session');
 const cors = require('cors');
 const socketIo = require('socket.io');
+const path = require('path');
 const FileStore = require('session-file-store')(session);
 const http = require('http');
 const { Module } = require('module');
@@ -252,6 +253,7 @@ io.on('connection', (socket) => {
 
 app.use(cors({ origin: true, credentials: true }));
 
+app.use(express.static(path.join(__dirname, '../../client/build')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -273,5 +275,9 @@ app.get('/rooms', (req, res) => {
 app.use('/auth', authRouter);
 app.use('/statistics', statisicsRouter);
 app.use('/skins', skinRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 server.listen(PORT, console.log('Server running on Port ', PORT));
